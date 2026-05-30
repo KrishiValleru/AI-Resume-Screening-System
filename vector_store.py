@@ -6,9 +6,9 @@ load_dotenv()
 from agno.knowledge.document.base import Document
 from agno.knowledge.embedder.google import GeminiEmbedder
 from agno.vectordb.pgvector import PgVector
+import os
 
-DB_URL = "postgresql+psycopg://Krishi.Valleru@localhost/resume_screening"
-
+DB_URL = os.getenv("DATABASE_URL")
 vector_db = PgVector(
     table_name="resume_embeddings",
     db_url=DB_URL,
