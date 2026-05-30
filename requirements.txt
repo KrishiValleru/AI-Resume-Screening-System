@@ -2,7 +2,7 @@ streamlit
 agno
 google-genai
 sqlalchemy
-psycopg
+psycopg[binary]
 pgvector
 pdfplumber
 python-dotenv
